@@ -7,7 +7,7 @@
 //
 
 import Foundation
-class Food {
+class FoodOject {
     
     var name : String?
     var calories : String?

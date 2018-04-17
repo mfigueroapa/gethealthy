@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		22016AFB205082AA0082C1A7 /* FoodTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22016AFA205082AA0082C1A7 /* FoodTracking.swift */; };
 		22016AFF205177010082C1A7 /* FoodTrackingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22016AFE205177010082C1A7 /* FoodTrackingTableViewCell.swift */; };
-		22016B01205177930082C1A7 /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22016B00205177930082C1A7 /* Food.swift */; };
+		22016B01205177930082C1A7 /* FoodOject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22016B00205177930082C1A7 /* FoodOject.swift */; };
 		220D721B2032282F008C2F15 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 220D721A2032282F008C2F15 /* AppDelegate.swift */; };
 		220D72202032282F008C2F15 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 220D721E2032282F008C2F15 /* Main.storyboard */; };
 		220D72252032282F008C2F15 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 220D72232032282F008C2F15 /* LaunchScreen.storyboard */; };
@@ -20,12 +20,14 @@
 		225EBD95204F53E90003FD5A /* CalcMacrosD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225EBD94204F53E90003FD5A /* CalcMacrosD.swift */; };
 		225EBD97204F541E0003FD5A /* CalcMacrosEResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225EBD96204F541E0003FD5A /* CalcMacrosEResults.swift */; };
 		225EBD99204F786A0003FD5A /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225EBD98204F786A0003FD5A /* Model.swift */; };
+		22913E5620856955003D8593 /* CoreDataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22913E5520856955003D8593 /* CoreDataHandler.swift */; };
+		22913E5920856B8B003D8593 /* GetHealthy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 22913E5720856B8B003D8593 /* GetHealthy.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		22016AFA205082AA0082C1A7 /* FoodTracking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodTracking.swift; sourceTree = "<group>"; };
 		22016AFE205177010082C1A7 /* FoodTrackingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodTrackingTableViewCell.swift; sourceTree = "<group>"; };
-		22016B00205177930082C1A7 /* Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
+		22016B00205177930082C1A7 /* FoodOject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodOject.swift; sourceTree = "<group>"; };
 		220D72172032282F008C2F15 /* GetHealthy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GetHealthy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		220D721A2032282F008C2F15 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		220D721F2032282F008C2F15 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -38,6 +40,8 @@
 		225EBD94204F53E90003FD5A /* CalcMacrosD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalcMacrosD.swift; sourceTree = "<group>"; };
 		225EBD96204F541E0003FD5A /* CalcMacrosEResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalcMacrosEResults.swift; sourceTree = "<group>"; };
 		225EBD98204F786A0003FD5A /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		22913E5520856955003D8593 /* CoreDataHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHandler.swift; sourceTree = "<group>"; };
+		22913E5820856B8B003D8593 /* GetHealthy.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GetHealthy.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,22 +74,56 @@
 		220D72192032282F008C2F15 /* GetHealthy */ = {
 			isa = PBXGroup;
 			children = (
+				22913E5320856114003D8593 /* Model */,
+				22913E522085610A003D8593 /* CustomClasses */,
+				22913E51208560FB003D8593 /* Controllers */,
+				22913E5420856143003D8593 /* CoreData */,
 				220D721A2032282F008C2F15 /* AppDelegate.swift */,
-				225EBD8E204F50FF0003FD5A /* CalcMacrosA.swift */,
-				225EBD90204F53AC0003FD5A /* CalcMacrosB.swift */,
-				225EBD92204F53CC0003FD5A /* CalcMacrosC.swift */,
-				225EBD94204F53E90003FD5A /* CalcMacrosD.swift */,
-				225EBD96204F541E0003FD5A /* CalcMacrosEResults.swift */,
 				220D721E2032282F008C2F15 /* Main.storyboard */,
-				22016AFA205082AA0082C1A7 /* FoodTracking.swift */,
-				22016AFE205177010082C1A7 /* FoodTrackingTableViewCell.swift */,
-				225EBD98204F786A0003FD5A /* Model.swift */,
-				22016B00205177930082C1A7 /* Food.swift */,
 				220D72212032282F008C2F15 /* Assets.xcassets */,
 				220D72232032282F008C2F15 /* LaunchScreen.storyboard */,
 				220D72262032282F008C2F15 /* Info.plist */,
 			);
 			path = GetHealthy;
+			sourceTree = "<group>";
+		};
+		22913E51208560FB003D8593 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				225EBD8E204F50FF0003FD5A /* CalcMacrosA.swift */,
+				225EBD90204F53AC0003FD5A /* CalcMacrosB.swift */,
+				225EBD92204F53CC0003FD5A /* CalcMacrosC.swift */,
+				225EBD94204F53E90003FD5A /* CalcMacrosD.swift */,
+				225EBD96204F541E0003FD5A /* CalcMacrosEResults.swift */,
+				22016AFA205082AA0082C1A7 /* FoodTracking.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		22913E522085610A003D8593 /* CustomClasses */ = {
+			isa = PBXGroup;
+			children = (
+				22016AFE205177010082C1A7 /* FoodTrackingTableViewCell.swift */,
+				22016B00205177930082C1A7 /* FoodOject.swift */,
+			);
+			path = CustomClasses;
+			sourceTree = "<group>";
+		};
+		22913E5320856114003D8593 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				225EBD98204F786A0003FD5A /* Model.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		22913E5420856143003D8593 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				22913E5720856B8B003D8593 /* GetHealthy.xcdatamodeld */,
+				22913E5520856955003D8593 /* CoreDataHandler.swift */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -160,7 +198,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				22016B01205177930082C1A7 /* Food.swift in Sources */,
+				22016B01205177930082C1A7 /* FoodOject.swift in Sources */,
+				22913E5620856955003D8593 /* CoreDataHandler.swift in Sources */,
+				22913E5920856B8B003D8593 /* GetHealthy.xcdatamodeld in Sources */,
 				22016AFF205177010082C1A7 /* FoodTrackingTableViewCell.swift in Sources */,
 				225EBD97204F541E0003FD5A /* CalcMacrosEResults.swift in Sources */,
 				225EBD95204F53E90003FD5A /* CalcMacrosD.swift in Sources */,
@@ -354,6 +394,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		22913E5720856B8B003D8593 /* GetHealthy.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				22913E5820856B8B003D8593 /* GetHealthy.xcdatamodel */,
+			);
+			currentVersion = 22913E5820856B8B003D8593 /* GetHealthy.xcdatamodel */;
+			name = GetHealthy.xcdatamodeld;
+			path = ../../GetHealthy.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 220D720F2032282F008C2F15 /* Project object */;
 }

@@ -7,6 +7,8 @@
 //
 
 import Foundation
+import CoreData
+
 
 
 class Model {
@@ -23,17 +25,41 @@ class Model {
     static var fatsIntake : Double = 0.0
     static var callIntake : Double = 0.0
     
-    static var foodList : Array<Food> = []
+    static var foodList : Array<FoodOject> = []
+    static var food : [Food]? = nil
 
     static func initialize() {
         print("model initialized")
-        var food : Food
-        food = Food(name: "Chicken breast", calories: "100")
-        foodList.append(food)
-        food = Food(name: "Oatmeal", calories: "100")
-        foodList.append(food)
-        food = Food(name: "Protein powder", calories: "100")
-        foodList.append(food)
+        var thefood : FoodOject
+        thefood = FoodOject(name: "Chicken breast", calories: "100")
+        foodList.append(thefood)
+        thefood = FoodOject(name: "Oatmeal", calories: "100")
+        foodList.append(thefood)
+        thefood = FoodOject(name: "Protein powder", calories: "100")
+        foodList.append(thefood)
+        
+        
+        
+        CoreDataHandler.saveObject(name: "greek yogurt", calories: "150")
+        CoreDataHandler.saveObject(name: "choco yogurt", calories: "450")
+        food = CoreDataHandler.fetchObject()
+        for f in food! {
+            print("somethig")
+            print(f.name!)
+            print(f.calories!)
+        }
+        print("//////////////////////////////////////////")
+//        CoreDataHandler.deleteObject(food: food![0])
+//        food = CoreDataHandler.fetchObject()
+//        for f in food! {
+//            print("somethig")
+//            print(f.name!)
+//            print(f.calories!)
+//        }
+        
+//        CoreDataHandler.cleanDelete()
+//        food = CoreDataHandler.fetchObject()
+//        print("Print del objeto despues de cleanDelete: " , food)
     }
     
     static func processGender(){

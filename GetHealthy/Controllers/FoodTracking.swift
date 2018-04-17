@@ -91,8 +91,8 @@ class FoodTracking: UIViewController, UITableViewDelegate, UITableViewDataSource
         alertController.addAction(UIAlertAction(title: "Agregar", style: UIAlertActionStyle.default, handler: { (action) in alertController.dismiss(animated: true, completion:nil)
             let name = alertController.textFields?[0].text
             let calories = alertController.textFields?[1].text
-            var food : Food
-            food = Food(name: name, calories: calories)
+            var food : FoodOject
+            food = FoodOject(name: name, calories: calories)
             Model.foodList.append(food)
             self.tableView.reloadData()
             self.viewDidLoad()
