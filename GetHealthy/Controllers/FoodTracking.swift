@@ -25,14 +25,14 @@ class FoodTracking: UIViewController, UITableViewDelegate, UITableViewDataSource
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return Model.foodList.count
+        return Model.food!.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as? FoodTrackingTableViewCell {
-            let food = Model.foodList[indexPath.row]
+            let food = Model.food![indexPath.row]
             
-            cell.updateView(food: food)
+            cell.updateView(food)
             return cell
         } else {
             return FoodTrackingTableViewCell()
@@ -40,18 +40,21 @@ class FoodTracking: UIViewController, UITableViewDelegate, UITableViewDataSource
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let food = Model.foodList[indexPath.row]
+        let food = Model.food![indexPath.row]
         let alertControler = UIAlertController(title: food.name, message: "Ingresa nuevos valores", preferredStyle:.alert)
         let updateAction = UIAlertAction(title: "Actualizar", style:.default){(_) in
             let name = alertControler.textFields?[0].text
             let calories = alertControler.textFields?[1].text
-            Model.foodList[indexPath.row].name = name
-            Model.foodList[indexPath.row].calories = calories
+            CoreDataHandler.deleteObject(food: food)
+            CoreDataHandler.saveObject(name: name!, calories: calories!)
+            Model.reloadData()
             self.tableView.reloadData()
         }
         
         let deleteAction = UIAlertAction(title: "Eliminar comida", style:.default){(_) in
-            Model.foodList.remove(at: indexPath.row)
+            let food = Model.food![indexPath.row]
+            CoreDataHandler.deleteObject(food: food)
+            Model.reloadData()
             self.tableView.reloadData()
         }
         
@@ -74,7 +77,8 @@ class FoodTracking: UIViewController, UITableViewDelegate, UITableViewDataSource
     @IBAction func cleanInfoButtonClicked(_ sender: Any) {
         let alertController = UIAlertController(title: "Cuidado", message: "¿Seguro que quieres eliminar todo?", preferredStyle:.alert)
         let yes = UIAlertAction(title: "Aceptar", style: UIAlertActionStyle.default, handler: { (action) in alertController.dismiss(animated: true, completion:nil)
-            Model.foodList.removeAll()
+            CoreDataHandler.cleanDelete()
+            Model.reloadData()
             self.tableView.reloadData()
         })
         let no = UIAlertAction(title: "Cancelar", style: UIAlertActionStyle.default, handler: { (action) in alertController.dismiss(animated: true, completion:nil) })
@@ -91,9 +95,8 @@ class FoodTracking: UIViewController, UITableViewDelegate, UITableViewDataSource
         alertController.addAction(UIAlertAction(title: "Agregar", style: UIAlertActionStyle.default, handler: { (action) in alertController.dismiss(animated: true, completion:nil)
             let name = alertController.textFields?[0].text
             let calories = alertController.textFields?[1].text
-            var food : FoodOject
-            food = FoodOject(name: name, calories: calories)
-            Model.foodList.append(food)
+            CoreDataHandler.saveObject(name: name!, calories: calories!)
+            Model.reloadData()
             self.tableView.reloadData()
             self.viewDidLoad()
         }))
