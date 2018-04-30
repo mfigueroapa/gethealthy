@@ -12,6 +12,8 @@
 		220D721B2032282F008C2F15 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 220D721A2032282F008C2F15 /* AppDelegate.swift */; };
 		220D72202032282F008C2F15 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 220D721E2032282F008C2F15 /* Main.storyboard */; };
 		220D72252032282F008C2F15 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 220D72232032282F008C2F15 /* LaunchScreen.storyboard */; };
+		221E31612096A07D009F7830 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221E31602096A07D009F7830 /* RoundedButton.swift */; };
+		221E31632096A70F009F7830 /* RoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221E31622096A70F009F7830 /* RoundedView.swift */; };
 		225EBD8D204F47A20003FD5A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 220D72212032282F008C2F15 /* Assets.xcassets */; };
 		225EBD8F204F50FF0003FD5A /* CalcMacrosA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225EBD8E204F50FF0003FD5A /* CalcMacrosA.swift */; };
 		225EBD91204F53AC0003FD5A /* CalcMacrosB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225EBD90204F53AC0003FD5A /* CalcMacrosB.swift */; };
@@ -32,6 +34,8 @@
 		220D72212032282F008C2F15 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		220D72242032282F008C2F15 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		220D72262032282F008C2F15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		221E31602096A07D009F7830 /* RoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
+		221E31622096A70F009F7830 /* RoundedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedView.swift; sourceTree = "<group>"; };
 		225EBD8E204F50FF0003FD5A /* CalcMacrosA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalcMacrosA.swift; sourceTree = "<group>"; };
 		225EBD90204F53AC0003FD5A /* CalcMacrosB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalcMacrosB.swift; sourceTree = "<group>"; };
 		225EBD92204F53CC0003FD5A /* CalcMacrosC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalcMacrosC.swift; sourceTree = "<group>"; };
@@ -101,6 +105,8 @@
 		22913E522085610A003D8593 /* CustomClasses */ = {
 			isa = PBXGroup;
 			children = (
+				221E31602096A07D009F7830 /* RoundedButton.swift */,
+				221E31622096A70F009F7830 /* RoundedView.swift */,
 				22016AFE205177010082C1A7 /* FoodTrackingTableViewCell.swift */,
 			);
 			path = CustomClasses;
@@ -202,6 +208,8 @@
 				225EBD95204F53E90003FD5A /* CalcMacrosD.swift in Sources */,
 				225EBD93204F53CC0003FD5A /* CalcMacrosC.swift in Sources */,
 				225EBD8F204F50FF0003FD5A /* CalcMacrosA.swift in Sources */,
+				221E31632096A70F009F7830 /* RoundedView.swift in Sources */,
+				221E31612096A07D009F7830 /* RoundedButton.swift in Sources */,
 				22016AFB205082AA0082C1A7 /* FoodTracking.swift in Sources */,
 				225EBD91204F53AC0003FD5A /* CalcMacrosB.swift in Sources */,
 				220D721B2032282F008C2F15 /* AppDelegate.swift in Sources */,

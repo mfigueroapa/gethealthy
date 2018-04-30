@@ -31,8 +31,8 @@ class Model {
         print("model initialized")
         
         //Insert Examples everytime the app loads
-        CoreDataHandler.saveObject(name: "greek yogurt", calories: "150")
-        CoreDataHandler.saveObject(name: "choco yogurt", calories: "450")
+//        CoreDataHandler.saveObject(name: "greek yogurt", calories: "150")
+//        CoreDataHandler.saveObject(name: "choco yogurt", calories: "450")
        
         //Print in console to verify data
         food = CoreDataHandler.fetchObject()
